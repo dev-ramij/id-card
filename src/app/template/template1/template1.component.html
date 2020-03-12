@@ -1,0 +1,72 @@
+<input type="file" name="myImage" accept="image/*" (change)="loadPhoto($event)" />
+
+<input type="file" name="myImage" accept="image/*" (change)="loadLogo($event)" />
+
+<div id="myTableElementId" style="width: 350px; height:fit-content">
+    <div class="flex-container header">
+        <img [src]="logo" class="logo" style="margin:auto">
+        <h2 style="margin:auto;">
+            Alumnus Software Limited
+        </h2>
+    </div>
+    <div class="flex-container">
+          <div>
+            <img [src]="photo" class="passport" style="margin-top:10px">
+        </div>
+        <div>
+            <table style="margin-top: 10px;font-size: small;">
+                <tr style="font-size: medium;">
+                    <td colspan="2">
+                        <b>ABDUR RAMIJ RAJ</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>Guardian's name:</b>
+                    </td>
+                    <td>
+                        Abdus Samad
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>Age:</b>
+                    </td>
+                    <td>
+                        23
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>Class:</b>
+                    </td>
+                    <td>
+                        Graduate
+                    </td>
+                </tr>
+            </table>       
+        </div>  
+    </div>
+    <div class="header">
+        <table style="font-size: x-small;">
+            <tr>
+                <td>
+                    Address:
+                </td>
+                <td>
+                    Infinity Think Tank, Sector-v, Kol-135
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Contact no:
+                </td>
+                <td>
+                    033-1587458
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<button class="mt-4" (click)="export()" tooltip="Button">Save</button>

@@ -1,0 +1,21 @@
+.passport {
+  height: 80px;
+  width: 65px;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.header {
+  width: 350px;
+  height: fit-content;
+  background-color: gray;
+}
