@@ -1,12 +1,14 @@
-<div class="flex-container">
-    <mat-card style="margin-left:300px;">
+<div class="make-align">
+    <mat-card>
         <mat-card-header>
             <mat-card-title>INSTITUTE DETAILS</mat-card-title>
-            <button mat-button color="accent" style="margin-left: 300px;" (click)="openTemplateDialog()">
-                Choose template
-            </button>
-            <i class="fas view-template fa fa-eye" (mouseleave)="showdemoTemplate=false"
-                (mouseenter)="showdemoTemplate=true"></i>
+            <div class="fill"></div>
+            <div class="make-align">
+                <button mat-button color="accent" (click)="openTemplateDialog()">
+                    Choose template
+                </button>
+                <i class="fas view-template fa fa-eye" (mouseleave)="showdemoTemplate=false" (mouseenter)="showdemoTemplate=true"></i>
+            </div>
         </mat-card-header>
         <mat-divider></mat-divider>
         <mat-form-field class="full-width">
@@ -24,41 +26,42 @@
             <textarea [(ngModel)]="instituteDetails.address" matInput></textarea>
         </mat-form-field>
 
-        <label for="upload-photo" class="select-photo">
-            <button mat-button color="accent" (click)="input.click()">Choose logo</button>
-            <input type="file" #input id="upload-photo" accept="image/*" (change)="loadLogo($event)" />
-        </label>
-        <i class="fas view-logo fa fa-eye" (mouseleave)="showlogo=false" (mouseenter)="showlogo=true"></i>
-
-        <div class="right-align">
+        <div class="make-align">
+            <div class="fill"></div>
+            <label for="upload-photo" class="select-photo">
+                <button mat-button color="accent" (click)="input.click()">Choose logo</button>
+                <input type="file" #input id="upload-photo" accept="image/*" (change)="loadLogo($event)" />
+            </label>
+            <i class="fas view-logo fa fa-eye" (mouseleave)="showlogo=false" (mouseenter)="showlogo=true"></i>
+        </div>
+        <div class="make-align">
+            <div class="fill"></div>
             <button mat-button color="primary" (click)="saveTheDetails()">Next</button>
         </div>
     </mat-card>
-    <div [ngSwitch]="selectedTemplate" *ngIf="showdemoTemplate" style="margin-top: 10px; margin-right: 160px;">
-        <div *ngSwitchCase="'template1'">
-            <app-demo-template1 (selectedTemplate)="selectedTemplate=$event">
-            </app-demo-template1>
-        </div>
-        <div *ngSwitchCase="'template2'">
-            <app-demo-template2 (selectedTemplate)="selectedTemplate=$event">
-            </app-demo-template2>
-        </div>
-        <div *ngSwitchCase="'template3'">
-            <app-demo-template3 (selectedTemplate)="selectedTemplate=$event">
-            </app-demo-template3>
-        </div>
-        <div *ngSwitchDefault>
-            <div class="no-file" style="margin-top: 10px;">
-                <i class="fa fa-exclamation-triangle"></i>
-                <span style="padding:5px">No template selected</span>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="no-file logo-no-file" *ngIf="showlogo && !instituteDetails.logo">
-        <i class="fa fa-exclamation-triangle"></i>
-        <span style="padding:5px">No logo selected</span>
-    </div>
-    <img *ngIf="showlogo && instituteDetails.logo" [src]="instituteDetails.logo" class="logo logo-dimension">
 </div>
+<div [ngSwitch]="selectedTemplate" *ngIf="showdemoTemplate">
+    <div *ngSwitchCase="'template1'">
+        <app-demo-template1 (selectedTemplate)="selectedTemplate=$event">
+        </app-demo-template1>
+    </div>
+    <div *ngSwitchCase="'template2'">
+        <app-demo-template2 (selectedTemplate)="selectedTemplate=$event">
+        </app-demo-template2>
+    </div>
+    <div *ngSwitchCase="'template3'">
+        <app-demo-template3 (selectedTemplate)="selectedTemplate=$event">
+        </app-demo-template3>
+    </div>
+    <div *ngSwitchDefault>
+        <div class="no-file">
+            <i class="fa fa-exclamation-triangle"></i>
+            <span style="padding:5px">No template selected</span>
+        </div>
+    </div>
+</div>
+<div class="no-file logo-no-file" *ngIf="showlogo && !instituteDetails.logo">
+    <i class="fa fa-exclamation-triangle"></i>
+    <span style="padding:5px">No logo selected</span>
+</div>
+<img *ngIf="showlogo && instituteDetails.logo" [src]="instituteDetails.logo" class="logo logo-dimension">
