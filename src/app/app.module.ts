@@ -21,6 +21,7 @@ import { DemoTemplate3Component } from './demo-template/demo-template3/demo-temp
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { SharedDataService } from './shared-data.service';
 import { CreateNewInstituteComponent } from './create-new-institute/create-new-institute.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import { CreateNewInstituteComponent } from './create-new-institute/create-new-i
     MatButtonModule,
     FormsModule,
     MatDialogModule,
-    MatTooltipModule
+    MatTooltipModule,
+    RouterModule
   ],
   entryComponents: [
     DialogTemplateComponent

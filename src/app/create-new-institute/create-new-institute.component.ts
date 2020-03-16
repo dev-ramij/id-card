@@ -27,7 +27,8 @@ export class CreateNewInstituteComponent implements OnInit, OnDestroy {
   public showdemoTemplate: boolean = false;
   public showlogo: boolean = false;
   public selectedTemplate: string = '';
-  constructor(public dialog: MatDialog, private sharedData: SharedDataService,private router:Router) { }
+  public name: string = 'hii';
+  constructor(public dialog: MatDialog, private sharedData: SharedDataService, private router: Router) { }
 
   ngOnInit() {
     this.sharedData.selectedTemplate.subscribe(s => this.selectedTemplate = s);
@@ -37,7 +38,7 @@ export class CreateNewInstituteComponent implements OnInit, OnDestroy {
   }
   saveTheDetails() {
     console.log(this.instituteDetails);
-    this.router.navigate(['/generate-id-card'])
+    this.router.navigate(['/generate-id-card/?'], { queryParams: { name: this.instituteDetails.name } })
   }
 
   loadLogo(event: any) {

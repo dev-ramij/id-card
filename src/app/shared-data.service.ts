@@ -8,5 +8,5 @@ export class SharedDataService {
 
   constructor() { }
   public selectedTemplate = new Subject<string>();
-
+  public name = new Subject<string>();
 }
