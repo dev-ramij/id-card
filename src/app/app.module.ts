@@ -20,6 +20,7 @@ import { DemoTemplate2Component } from './demo-template/demo-template2/demo-temp
 import { DemoTemplate3Component } from './demo-template/demo-template3/demo-template3.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { SharedDataService } from './shared-data.service';
+import { CreateNewInstituteComponent } from './create-new-institute/create-new-institute.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { SharedDataService } from './shared-data.service';
     DialogTemplateComponent,
     DemoTemplate1Component,
     DemoTemplate2Component,
-    DemoTemplate3Component
+    DemoTemplate3Component,
+    CreateNewInstituteComponent
   ],
   imports: [
     BrowserModule,

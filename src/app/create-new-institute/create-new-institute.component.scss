@@ -1,0 +1,63 @@
+.mat-card {
+    width: 50%;
+    height: fit-content;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  
+  .flex-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .fas {
+    color: slategrey;
+    cursor: pointer;
+  }
+  
+  input[type="file"] {
+    display: none;
+  }
+  
+  .select-photo {
+    cursor: pointer;
+  }
+  
+  .logo {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+  }
+  
+  .no-file {
+    color: #9f6000;
+    background-color: #feefb3;
+    height: fit-content;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
+  .make-align {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .fill {
+    flex: 1;
+  }
+  
+  .template {
+    position: absolute;
+    top: 4%;
+    margin-left: 10px;
+  }
+  
+  .logo-position {
+    position: absolute;
+    top: 45%;
+    margin-left: 10px;
+  }
+  
